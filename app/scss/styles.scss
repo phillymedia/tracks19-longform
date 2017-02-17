@@ -1,0 +1,372 @@
+@import 'longform-styles';
+@import 'philly-styles/values';
+
+
+html, body {
+  margin:0;
+  padding: 0;
+}
+
+
+
+
+// topper
+
+
+.videoText {
+    position: absolute;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    padding: 25px;
+    color: white;
+    line-height: 1.4;
+    font-size: 22px;
+    bottom: 30%;
+    font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel", "Times New Roman", serif;
+    display: none;
+}
+
+
+.image-gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+18,0.65+100 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 18%, rgba(0,0,0,0.65) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0.65) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0.65) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#00000000', endColorstr='#a6000000',GradientType=0 );
+    /* IE6-9 */
+}
+
+.overlayText {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: -50px auto 0;
+    text-align: center;
+    color: #fff;
+    font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", "Gotham Narrow", "Arial", sans-serif;
+    font-weight: 600;
+    letter-spacing: -5px;
+    line-height: normal;
+    text-shadow: 0 0 15px #000;
+    font-size: 80px;
+    z-index: 2;
+}
+
+.center-headerSection {
+    position: absolute;
+    z-index: 5;
+    padding: 20px 12px;
+    margin: 0 auto;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 15px #000;
+    z-index: 2;
+}
+
+.center-headDisplay {
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+
+.center-subHead {
+    margin: 40px auto 20px;
+    font-size: 24px;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+
+.center-byline {
+    line-height: 2.25em;
+    top: 15px;
+    color: white;
+    font-size: 16px;
+}
+
+.center-dateline {
+    color: white;
+    font-size: 12px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    line-height: 2.25em;
+    clear: both;
+}
+
+#background-cover {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: black;
+    top: 0;
+    z-index: 4;
+    display: none;
+}
+
+.flyover-container {
+    width: 100%;
+    z-index: 5;
+    position: relative;
+    max-width: 100vw;
+}
+
+.flyover-container-fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+#flyover-labels {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+}
+
+.gradient {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, transparent, white 70%) no-repeat;
+    position: absolute;
+    z-index: 3;
+    display: none;
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+    }
+
+video {
+    width: 100%;
+}
+
+
+
+
+
+
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#introVid {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#introHeadBox {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+
+
+#controls {
+    position: absolute;
+    z-index: 4;
+    bottom: 6%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    color: #ccc;
+    width: 200px;
+    display: inline-block;
+    background-color: #222;
+    opacity: 0.8;
+    cursor:pointer;
+}
+
+#controls:hover {
+  opacity: 1;
+}
+// #mute, #skip {
+//   display: inline-block;
+// }
+
+// #mute {
+//   font-size: 50px;
+// }
+//
+// #mute .glyphicon {
+//   width: 40px;
+// }
+
+#skip {
+  font-size:24px;
+  text-align: center;
+  padding: 5px 0;
+}
+
+#skip .glyphicon {
+    width: 15px;
+}
+
+// body
+
+
+
+#bodyContainer-1 {
+    margin-top: -70vh;
+    margin-bottom: 37vh;
+    z-index: 3;
+    position: relative;
+    opacity: 0;
+}
+
+#bodyContainer-1 p {
+  font-size: 24px;
+}
+
+.background-cover-white {
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    background-color: white;
+    margin-top: -49px;
+    z-index: 0;
+}
+
+
+
+.containerPhotoCredit, .containerPhotoCaption {
+  z-index: 3;
+  position: relative;
+}
+
+.left-offset{
+  margin-left:-25%!important
+}
+
+.right-offset{
+  margin-right:-25%!important
+}
+
+
+// chart
+
+.chartistChart {
+    padding: 25px 10px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.ct-series-a .ct-bar {stroke:#F78764 !important;}
+.ct-series-b .ct-bar{stroke:#47A8BD !important;}
+.ct-series-c .ct-bar {stroke:#A1C181 !important;}
+
+.heading {
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.description {
+    padding: 0;
+    margin: 0;
+    font-family: $philly-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.legend {
+    font-family: $philly-sans;
+    font-size: 13px;
+    color: #666;
+    display: block;
+    clear: both;
+    width: 100%;
+    padding: 18px 0 10px 0;
+    .title {
+        font-weight: bold;
+        font-size: 14px;
+    }
+    ul {
+        list-style-type: none !important;
+        margin: 0;
+        padding: 10px 0;
+    }
+    li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+.charttext {
+    font-size: 15px;
+    line-height: 1.5;
+    padding-bottom: 25px;
+}
+
+.source {
+    font-size: 13px;
+    font-family: $philly-sans;
+    color: $philly-mediumgray;
+    display: block;
+    text-align: right;
+    padding: 4px 0 0 0;
+}
+
+.gLine {
+    width: 20px;
+    height: 5px;
+    border-radius: 4px;
+    background-color: blue;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 4px;
+}
+
+
+//videoWrapper
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.videoWrapperCredit {
+    position: absolute;
+    bottom: -25px;
+}
+
+//mobileElem
+
+.desktopElem {
+  display:block;
+}
+.mobileElem {
+  display:none;
+}

@@ -1,0 +1,68 @@
+<!--removeIf(tmp)-->
+{% include "templates/shell/style-links.html" ignore missing %} {% include "partials/stylesheets.html" ignore missing %}
+<link rel="stylesheet" href="../../css/phillystyles.css">
+<link rel="stylesheet" href="../../css/styles.css">
+
+<body>
+    <!--endRemoveIf(tmp)-->
+
+
+    <!-- ..................Put html here!...........................  -->
+    <div class="chartistChart">
+        <h3 class="heading">Chart title here</h3>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum est quo voluptatum et doloremque, facere, ducimus totam minima, quisquam similique facilis incidunt fugit odio dicta autem quibusdam sapiente tempore nostrum.</p>
+        <div class="legend">
+            <div class="title">Legend Title</div>
+            <ul>
+                <li><span class="gLine" style="background-color:#A1C181; opacity: 0.7"></span>Data 1</li>
+                <li><span class="gLine" style="background-color:#47A8BD; opacity: 0.7"></span>Data 2</li>
+                <li><span class="gLine" style="background-color:#F78764; opacity: 0.7"></span>Data 3</li>
+
+            </ul>
+        </div>
+        <div class="ct-chart ct-golden-section"></div>
+        <div class="source">Source: xxxXXX</div>
+        <div class="source">Credit: xxxXXX</div>
+    </div>
+    <script src="http://media.philly.com/storage/inquirer/plugins/chartist/js/chartist.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://media.philly.com/storage/inquirer/plugins/chartist/css/chartist.css" />
+    <script>
+        new Chartist.Bar('.ct-chart', {
+            labels: ['Unemployment', 'Food stamps', 'Income, Less than $10k'],
+            series: [
+                [8.3, 13.2, 7.2],
+                [13.9, 25.2, 14.2],
+                [21.7, 56.6, 31.7]
+            ]
+        }, {
+            seriesBarDistance: 10,
+            reverseData: true,
+            horizontalBars: true,
+            axisY: {
+                offset: 70
+            },
+
+            plugins: [
+             Chartist.plugins.tooltip({
+                 tooltipFnc: function() {
+                     var $point = event.target;
+                     var value = $point.getAttribute('ct:value');
+                    //  var meta = $point.getAttribute('ct:meta');
+                    //  if (meta) {
+                         return value + "%"
+
+                     //}
+                 }
+             })
+         ]
+        });
+
+
+    </script>
+
+
+    <!--removeIf(tmp)-->
+    {% include "partials/script-links.html" %}
+</body>
+<script src="../../js/main.js"></script>
+<!--endRemoveIf(tmp)-->
